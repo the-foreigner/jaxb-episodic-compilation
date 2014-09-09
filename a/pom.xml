@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>schema.episode</groupId>
+		<artifactId>episodic-compilation-sample</artifactId>
+		<version>v0.1</version>
+	</parent>
+	
+    <artifactId>episodic-compilation-a</artifactId>
+	<name>episodic-compilation-a</name>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.jvnet.jaxb2.maven2</groupId>
+				<artifactId>maven-jaxb2-plugin</artifactId>
+				<version>0.9.0</version>
+				<configuration>
+					<extension>true</extension>
+					<verbose>true</verbose>
+					<forceRegenerate>true</forceRegenerate>
+				</configuration>
+				<executions>
+					<execution>
+					    <id>generate-a-model</id>
+					    <phase>generate-sources</phase>
+						<configuration>
+							<generatePackage>schema.episode.a</generatePackage>
+						</configuration>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

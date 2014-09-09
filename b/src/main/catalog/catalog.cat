@@ -1,0 +1,1 @@
+REWRITE_SYSTEM "classpath:schema.episode.a.xsd" "maven:schema.episode:episodic-compilation-a!/a.xsd"
