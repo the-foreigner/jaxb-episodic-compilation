@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:b="urn:b" targetNamespace="urn:b" xmlns:a="urn:a">
 		
-    <xs:include schemaLocation="classpath:schema.episode.a.xsd"/>
+    <xs:import schemaLocation="classpath:schema.episode.a.xsd" namespace="urn:a"/>
 
 	<xs:element name="Address">
 		<xs:complexType>
             <xs:sequence>
-				<xs:element ref="person" />
-                <xs:element ref="city" />
-				<xs:element ref="postcode" />
+				<xs:element ref="a:person" />
+                <xs:element ref="b:city" />
+				<xs:element ref="b:postcode" />
             </xs:sequence>
 		</xs:complexType>
 	</xs:element>
