@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:a="urn:a" targetNamespace="urn:a">
 	
 	<xs:element name="person">
 		<xs:complexType>
             <xs:sequence>
-                <xs:element ref="name" />
-                <xs:element ref="surname"/>
+                <xs:element ref="a:name" />
+                <xs:element ref="a:surname"/>
             </xs:sequence>
 		</xs:complexType>
 	</xs:element>
